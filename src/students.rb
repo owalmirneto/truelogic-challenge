@@ -1,18 +1,9 @@
 require_relative "data"
+require_relative "total_score"
 
 class Students
-  def self.total_score
-    output = 0
-
-    STUDENTS.map do |student|
-      output += student[:score]
-    end
-
-    output
-  end
-
   def self.average
-    Students.total_score / STUDENTS.size.to_f
+    TotalScore.call(STUDENTS) / STUDENTS.size
   end
 
   def self.grades

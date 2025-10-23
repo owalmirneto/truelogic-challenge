@@ -1,10 +1,7 @@
+require "debug"
 require_relative "../src/students"
 
 describe Students do
-  describe ".total_score" do
-    it { expect(Students.total_score).to eq(743) }
-  end
-
   describe ".average" do
     it { expect(Students.average).to eq(74.3) }
   end
