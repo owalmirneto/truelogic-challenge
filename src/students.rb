@@ -5,7 +5,7 @@ class Students
     output = 0
 
     STUDENTS.map do |student|
-      output = output + student[:score]
+      output += student[:score]
     end
 
     output
@@ -42,7 +42,7 @@ class Students
       @grouped = {}
 
       STUDENTS.map do |student|
-      @grouped[student[:score]] = student[:name]
+        @grouped[student[:score]] = student[:name]
       end
 
       @grouped
