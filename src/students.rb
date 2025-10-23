@@ -1,9 +1,9 @@
 require_relative "data"
-require_relative "total_score"
+require_relative "average"
 
 class Students
   def self.average
-    TotalScore.call(STUDENTS) / STUDENTS.size
+    Average.call(STUDENTS)
   end
 
   def self.grades
