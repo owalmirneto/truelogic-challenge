@@ -1,5 +1,6 @@
 require_relative "data"
 require_relative "average"
+require_relative "grades"
 
 class Students
   def self.average
@@ -7,17 +8,7 @@ class Students
   end
 
   def self.grades
-    output = {}
-
-    STUDENTS.map do |student|
-      RANGE_GRADE_RULES.keys.map do |grade|
-        if RANGE_GRADE_RULES[grade].to_a.include?(student[:score])
-          output[grade] = output[grade] ? output[grade] + 1 : 1
-        end
-      end
-    end
-
-    output
+    Grades.call(STUDENTS)
   end
 
   def self.failing_students

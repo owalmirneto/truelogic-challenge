@@ -10,11 +10,3 @@ STUDENTS = [
   { name: "Ivy", score: 100 },
   { name: "Jack", score: 54 }
 ]
-
-RANGE_GRADE_RULES = {
-  A: 90..100,
-  B: 80..89,
-  C: 70..79,
-  D: 60..69,
-  F: 0..59
-}
